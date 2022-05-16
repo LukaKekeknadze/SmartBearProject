@@ -6,6 +6,7 @@ hookspec = HookspecMarker("pytest")
 
 def pytest_sessionfinish(session, exitstatus):
     Driver.driver.quit()
+    return "Test successful Executed"
 def pytest_runtest_teardown(item):
     node = item.obj
     image_name = "1.png"
